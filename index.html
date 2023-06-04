@@ -14,11 +14,6 @@
     <div class="container">
         <div class="navigation">
             <ul>
-                <li>
-                    <div class='iasClockDiv'>
-                        <canvas class='iasClockCanvas' id='iasClockCanvas' width='150px' height='150px'></canvas>
-                    </div>
-                </li>
                 <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu();">About</a></li>
                 <li><a href="#services" onclick="toggleMenu();">Services</a></li>
@@ -36,14 +31,17 @@
             </div>
 
             <!-- banner -->
+
             <section class="banner" id="banner">
+
                 <div class="content">
                     <div class="imgBx">
                         <img src="img/me.JPG">
                     </div>
                     <h3>Karamuddin Qaderi</h3>
-                    <p>Flutter Developer | Web Developer | Digital Marketing SEO | IT Technician</p>
+                    <p>Flutter Developer | Web Developer | IT Technician</p>
                     <a href="cv/KQ.pdf" class="btn">Download My CV</a>
+                    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
                     <ui class="socialMedia">
                         <li><a href="https://www.facebook.com/karamuddin.qaderi/"><i class="fab fa-facebook-f"></i></a>
                         </li>
