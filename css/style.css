@@ -1,5 +1,6 @@
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -39,7 +40,6 @@ body {
     width: 0;
 }
 
-
 .navigation ul {
     position: relative;
     top: 0;
@@ -74,7 +74,6 @@ body {
     opacity: 1;
     letter-spacing: 5px;
     transition: 0.8s;
-
 }
 
 .main {
@@ -206,7 +205,6 @@ p {
     display: flex;
 }
 
-
 .socialMedia li {
     list-style: none;
 }
@@ -259,7 +257,7 @@ p {
 }
 
 .title h2::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -282,18 +280,16 @@ p {
 
 .about .content .imgBox {
     margin-left: 10%;
-
 }
 
 .about .content .imgBox img {
     max-width: 90%;
     box-shadow: 10px 10px 20px#000;
-    
 }
 
 .services .content {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin: 40px 0;
 }
@@ -325,11 +321,11 @@ p {
 
 .services .content .serviceBox p {
     text-align: center;
-} 
+}
 
 .Project .content {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin: 40px 0;
 }
@@ -362,7 +358,6 @@ p {
     object-fit: cover;
 }
 
-
 .Project .content .workBx .txtBx {
     position: absolute;
     top: 0;
@@ -388,7 +383,7 @@ p {
 
 .testimonials .content {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin: 40px 0;
 }
@@ -400,14 +395,12 @@ p {
     padding: 20px;
 }
 
-
 .testimonials .content .testimonialsBox .imgBx {
     position: relative;
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
 }
-
 
 .testimonials .content .testimonialsBox .imgBx img {
     position: absolute;
@@ -443,7 +436,6 @@ p {
     font-size: 0.7em;
 }
 
-
 .contact {
     display: flex;
     justify-content: flex-start;
@@ -461,7 +453,7 @@ p {
 .contact .contactForm .row {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin-top: 20px;
     display: flex;
@@ -478,8 +470,7 @@ p {
 }
 
 .contact .contactForm .row input,
-.contact .contactForm .row2 textarea
-{
+.contact .contactForm .row2 textarea {
     width: 100%;
     padding: 10px;
     border: none;
@@ -576,25 +567,162 @@ p {
     }
 
     .services .content {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .Project .content {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 767px) {
     .services .content {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .Project .content {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .testimonials .content {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
+}
+.closePopup {
+    width: fit-content;
+    background-color: red;
+    color: white;
+    padding: 2px 5px 2px 5px;
+    font-size: 15px;
+    border-radius: 9px;
+    position: absolute;
+    font-family: sans-serif;
+    right: -10px;
+    top: -5px;
+    cursor: pointer;
+}
+.listAll > table {
+    counter-reset: rowNumber;
+}
 
+.listAll > table tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+.listAll > table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+.meetingDisplay {
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px;
+    border-radius: 10px;
+    padding: 3px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace;
+}
+.arrow-down {
+    position: relative;
+    margin: 15px;
+    box-sizing: border-box;
+    background: #666;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.arrow-down:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -12px;
+    top: -16px;
+    left: 50%;
+    box-sizing: border-box;
+    border: 8px solid black;
+    border-color: transparent transparent #666 #666;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.iasClockDiv:hover > .shadow-element,
+.iasClockDiv:hover > .hover-element {
+    display: block;
+}
+.c_form {
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    background: #ccc;
+    z-index: 3;
+    top: 40%;
+    margin-left: 40%;
+    margin-right: auto;
+}
+.listAll {
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    background: #fff;
+    width: 50%;
+    z-index: 3;
+    max-height: 95%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.shadow-box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.listAll > table,
+.listAll > table td,
+.listAll > table th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.listAll > table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.listAll > table th,
+.listAll > table td {
+    padding: 4px;
+}
+
+.listAll > table td:first-child {
+    width: 30px;
+    text-align: center;
+}
+.listAll > table td:nth-child(2),
+.listAll > table td:nth-child(3) {
+    width: 50px;
+}
+.listAll > table td:last-child {
+    width: 30px;
+    text-align: center;
+}
+
+.iasClockCanvas {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px;
+    background-color: white;
+}
+.iasClockDiv {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
 }
